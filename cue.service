@@ -1,0 +1,10 @@
+[Unit]
+Description=Cue Reminder Popup on Login/Resume
+After=graphical-session.target suspend.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 ~/Cue/Scripts/cue_popup.py
+
+[Install]
+WantedBy=default.target
